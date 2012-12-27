@@ -17,10 +17,10 @@ On vous demande de calculer une solution optimale.
 
 Considérez par exemple le cas où la compagnie a 4 commandes :
 
-   AF514 : heure de départ 0, durée 5, prix 10
-   CO5 : heure de départ 3, durée 7, prix 14
-   AF515 : heure de départ 5, durée 9, prix 7
-   BA01 : heure de départ 6, durée 9, prix 8
+	AF514 : heure de départ 0, durée 5, prix 10
+	CO5 : heure de départ 3, durée 7, prix 14
+	AF515 : heure de départ 5, durée 9, prix 7
+	BA01 : heure de départ 6, durée 9, prix 8
 
 La solution optimale consiste à décliner CO5 et AF515, et le revenu est de 10+8=18. Remarquez qu'une solution à partir de AF514 et AF515 est faisable (l'avion serait loué sans interruption de 0 à 14) mais non-optimale.
 Entrée
@@ -43,7 +43,9 @@ Exemple d'entrée
 	AF515 5 9 7
 	BA01 6 9 8
 Exemple de sortie
+
 	18
+
 
 
 
