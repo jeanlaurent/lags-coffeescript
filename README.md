@@ -21,7 +21,7 @@ Considérez par exemple le cas où la compagnie a 4 commandes :
    CO5 : heure de départ 3, durée 7, prix 14
    AF515 : heure de départ 5, durée 9, prix 7
    BA01 : heure de départ 6, durée 9, prix 8
-   
+
 La solution optimale consiste à décliner CO5 et AF515, et le revenu est de 10+8=18. Remarquez qu'une solution à partir de AF514 et AF515 est faisable (l'avion serait loué sans interruption de 0 à 14) mais non-optimale.
 Entrée
 
@@ -37,13 +37,13 @@ Les sorties de deux cas de tests consécutifs seront séparés par une ligne bla
 
 Exemple d'entrée
 
-   4
-   AF514 0 5 10
-   CO5 3 7 14
-   AF515 5 9 7
-   BA01 6 9 8
+	4
+	AF514 0 5 10
+	CO5 3 7 14
+	AF515 5 9 7
+	BA01 6 9 8
 Exemple de sortie
-   18
+	18
 
 
 
