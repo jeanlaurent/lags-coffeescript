@@ -1,3 +1,5 @@
+# need node with npm modules for mocha, chai, coffee-script
+# run with mocha --compilers coffee-script:coffee-script lags.coffee
 should = require('chai').should()
 
 class TripOptimizer
@@ -8,9 +10,9 @@ class TripOptimizer
 		return @optimize(@trips) unless trips?
 		return 0 if trips.length == 0
 		currentTrip = trips[0]
-		nonOverlappingTrips = trips[1..].filter (trip) -> !currentTrip.overlap trip
-		gain = currentTrip.gain + @optimize nonOverlappingTrips
-		return Math.max gain, @optimize trips[1..]
+		nonOverlappingTrips = trips[1..].filter (trip) -> not currentTrip.overlap trip
+		currentGain = currentTrip.gain + @optimize nonOverlappingTrips
+		return Math.max currentGain, @optimize trips[1..]
 
 
 class Trip
@@ -115,7 +117,7 @@ describe 'lags', ->
 			AF3 2 1 6
  			""").optimize().should.equal 10
 
-	it 'Big Gain, Big Gain !', ->
+	it 'should yell to the earth : Big Gain, Big Gain !', ->
 		new TripOptimizer("""
 			AF514 0 5 10
 			CO5 3 7 14
